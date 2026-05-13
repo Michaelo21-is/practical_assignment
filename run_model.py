@@ -3,7 +3,7 @@ import cv2
 
 
 class RunModel:
-
+    # חישוב חפיפה של התיבות
     def calculate_iou(self, box_1, box_2):
         x1, y1, x2, y2 = box_1
         x3, y3, x4, y4 = box_2
@@ -39,7 +39,7 @@ class RunModel:
         iou = intersection_area / union_area
 
         return iou
-
+    # חילוץ הקורדינטות של התיבות
     def extract_boxes(self, results):
         boxes = []
 
@@ -49,6 +49,7 @@ class RunModel:
 
         return boxes
 
+    # בודק אם התיבות חופפים אחד לשני
     def are_results_similar(self, boxes_1, boxes_2, iou_threshold=0.5):
         # קודם בודקים שיש אותה כמות תיבות
         if len(boxes_1) != len(boxes_2):
