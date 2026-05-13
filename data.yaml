@@ -1,8 +1,8 @@
-# this is for explaining yolo where the is and what the label are
+# This file tells YOLO where the dataset is located and what labels exist
 path: C:/Users/micha/PycharmProjects/PythonProject1/data
 
-train: images/train
-val: images/val
+train: train/images
+val: validation/images
 
 nc: 1
 names: ["size_arrow"]
