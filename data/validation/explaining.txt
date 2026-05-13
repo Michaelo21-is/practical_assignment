@@ -1,0 +1,2 @@
+The model uses validation images and labels only to measure performance.
+It predicts results, compares them with the validation labels, but does not update its weights.

@@ -1,0 +1,2 @@
+The model uses the training images and their labels to learn. It predicts bounding boxes and classes
+, compares them with the correct labels, calculates the loss, and updates its weights.

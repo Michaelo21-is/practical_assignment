@@ -1,0 +1,8 @@
+# this is for explaining yolo where the is and what the label are
+path: C:/Users/micha/PycharmProjects/PythonProject1/data
+
+train: images/train
+val: images/val
+
+nc: 1
+names: ["size_arrow"]
