@@ -90,8 +90,6 @@ class RunModel:
             # אם זו לא ההרצה הראשונה, משווים להרצה הקודמת
             if previous_boxes is not None:
                 if self.are_results_similar(previous_boxes, current_boxes, iou_threshold=0.5):
-                    print("Model result is stable")
-
                     image_with_boxes = results[0].plot()
 
                     if show_table_image:
