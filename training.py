@@ -11,4 +11,4 @@ class Training:
             device="0",  # for using GPU set device to 0
             name = "size_arrow_model" # after the training is done the model will be saved in runs/detect/size_arrow_model/weights
         )
-        # after runing thie train model it should open a new file with the training progress called runs/detect/size_arrow_model/weights
+        # after runing the train model it should open a new file with the training progress called runs/detect/size_arrow_model/weights

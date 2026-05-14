@@ -82,6 +82,7 @@ class RunModel:
             results = model.predict(
                 source=image_path,
                 conf=confidence,
+                imgsz=640,
                 show=False,
             )
 
@@ -110,7 +111,7 @@ class RunModel:
 
                         print("Number of arrows detected:", number_of_arrows)
 
-                    return current_boxes
+                    return "image processed successfully"
 
             previous_boxes = current_boxes
 
