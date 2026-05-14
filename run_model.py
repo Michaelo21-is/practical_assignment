@@ -55,7 +55,6 @@ class RunModel:
         if len(boxes_1) != len(boxes_2):
             return False
 
-        matched_boxes = 0
 
         for box_1 in boxes_1:
             found_match = False
@@ -67,12 +66,10 @@ class RunModel:
                     found_match = True
                     break
 
-            if found_match:
-                matched_boxes += 1
-            else:
+            if not found_match:
                 return False
 
-        return matched_boxes == len(boxes_1)
+        return True
 
     def run_model(self, image_path: str, show_table_image: bool, show_cordinates: bool):
         model = YOLO("runs/detect/size_arrow_model/weights/best.pt")
