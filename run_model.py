@@ -69,6 +69,8 @@ class RunModel:
 
             if found_match:
                 matched_boxes += 1
+            else:
+                return False
 
         return matched_boxes == len(boxes_1)
 
@@ -103,13 +105,11 @@ class RunModel:
 
                         for box in results[0].boxes:
                             x1, y1, x2, y2 = box.xyxy[0].tolist()
-                            confidence_score = box.conf[0].item()
 
                             number_of_arrows += 1
 
                             print("Box coordinates:")
                             print(f"x1={x1}, y1={y1}, x2={x2}, y2={y2}")
-                            print(f"confidence={confidence_score}")
 
                         print("Number of arrows detected:", number_of_arrows)
 
